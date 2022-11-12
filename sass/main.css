@@ -196,14 +196,30 @@ header {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../image/Imga.png");
 }
 
-.hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #FFFFFF;
+@media screen and (min-widht: 768px) {
+  .hero-section {
+    padding-left: 204px;
+  }
+}
+@media screen and (min-widht: 1200px) {
+  .hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+}
+
+@media screen and (min-widht: 480px) {
+  .hero-title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 }
 
 .hero-button {
@@ -719,6 +735,10 @@ footer .container {
   color: #FFFFFF;
   margin-top: 30px;
   border: none;
+}
+
+.h3-footer {
+  color: #FFFFFF;
 }
 
 .footer-address {
