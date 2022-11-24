@@ -16,6 +16,21 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 h1,
 h2,
@@ -48,6 +63,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* header */
 nav {
   display: flex;
@@ -72,6 +93,13 @@ nav {
 
 .nav-item:first-child {
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-btn {
+    display: none;
+    width: 50px;
+  }
 }
 
 .social-item-header:hover {
@@ -151,12 +179,27 @@ nav {
 
 .nav-list {
   margin-left: 95px;
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
 }
 
 .contacts-header {
   align-items: center;
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts-header {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-header {
+    display: flex;
+  }
 }
 
 .contact-header {
@@ -177,6 +220,44 @@ header {
   background-color: #FFFFFF;
   width: 100%;
   top: 0px;
+}
+
+.mobile-modal {
+  background-color: aqua;
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 235px;
+  transform: translate(-50%, -50%);
+}
+
+.backdrop {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+.backdrop.is-hidden {
+  display: none;
+}
+
+.mobile-btn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  margin-left: 270px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .mobile-btn {
+    display: none;
+  }
 }
 
 .card-headerlink {
@@ -333,6 +414,7 @@ footer {
 
 footer .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-logo {

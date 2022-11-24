@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="./sass/main.css">
 
 
 <body>
@@ -25,6 +25,14 @@
             <nav>
 
                 <a href="/" class="nav-logo"><span class="logo-color">Web</span>Studio</a>
+                <button class="mobile-btn"  data-mobile-open>
+                    
+                    <svg width="20px" height="20px">
+                        <use href="./image/sprite-mobile.svg#menu">
+                            
+                        </use>
+                    </svg>
+                </button>
 
                 <ul class="nav-list">
                     <li class="nav-item">
@@ -126,48 +134,27 @@
                 </form>
             </div>
         </section>
-        <script>
-            const refs = {
-                openModalBtn: document.querySelector("[data-open-modal]"),
-                closeModalBtn: document.querySelector("[data-close-modal]"),
-                backdrop: document.querySelector("[data-backdrop]"),
-            };
-
-            refs.openModalBtn.addEventListener("click", toggleModal);
-            refs.closeModalBtn.addEventListener("click", toggleModal);
-
-            refs.backdrop.addEventListener("click", logBackdropClick);
-
-            function toggleModal() {
-                refs.backdrop.classList.toggle("is-hidden");
-            }
-
-            function logBackdropClick() {
-                console.log("Це клік в бекдроп");
-            }
-        </script>
-
-        <!--чому ми?-->
-        <section class="section-whywe">
+            <!--чому ми?-->
+         <section class="section-whywe">
             <div class="container">
                 <h2 hidden>Чому ми?</h2>
                 <ul class="whywe-list">
-                    <li>
+                    <li class="whywe-item">
                         <h3 class="whywe-title ">УВАГА ДО ДЕТАЛЕЙ</h3>
                         <p class="whywe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Voluptatem veritatis exercitationem velit magnam iure.</p>
                     </li>
-                    <li>
+                    <li class="whywe-item">
                         <h3 class="whywe-title">ПУНКТУАЛЬНІСТЬ</h3>
                         <p class="whywe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Voluptatem veritatis exercitationem velit magnam iure.</p>
                     </li>
-                    <li>
+                    <li class="whywe-item">
                         <h3 class="whywe-title">ПЛАНУВАННЯ</h3>
                         <p class="whywe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Voluptatem veritatis exercitationem velit magnam iure.</p>
                     </li>
-                    <li>
+                    <li class="whywe-item">
                         <h3 class="whywe-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
                         <p class="whywe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Voluptatem veritatis exercitationem velit magnam iure.</p>
@@ -178,22 +165,8 @@
         </section>
         <!--чим ми займаємося?-->
         
-        <!-- <section class="work-section">
-            <div class="container">
-                <h2 class="work-title">Чим ми займаємося?</h2>
-                <ul class="work-list">
-                    <li class="work-pictures">
-                        <img src="./image/img.png" alt="Чим ми займаємося">
-                        <div class="about-block"> <p class="about-list-subtitle">ДЕСКТОПНІ ЗАСТОСУНКИ</p> </div>
-                    </li>
-                    <li class="work-pictures">
-                        <img src="./image/img(1).png" alt="Чим ми займаємося">
-                    </li>
-                    <li class="work-pictures">
-                        <img src="./image/img(2).png" alt="Чим ми займаємося">
-                    </li>
-                </ul>
-            </div>w w   
+        <section class="about-section">
+            
             <div class="container">
               <h2 class="about-title">Чим ми займаємося</h2>
               <ul class="about-list">
@@ -237,7 +210,7 @@
                 <ul class="team-list">
                     <li class="team-item">
 
-                        <img src="./image/d.jpg" alt="Ігор Дем’яненко" width="270px">
+                        <img src="./image/d.jpg" alt="Ігор Дем’яненко">
                         <h3 class="team-name">Ігор Дем’яненко</h3>
                         <p class="team-about">Product Designer</p>
                         <ul class="social-list">
@@ -273,7 +246,7 @@
                     </li>
 
                     <li class="team-item">
-                        <img src="./image/b.jpg" alt="Ольга Репіна" width="270px">
+                        <img src="./image/b.jpg" alt="Ольга Репіна">
                         <h3 class="team-name">Ольга Репіна</h3>
                         <p class="team-about">Frontend Developer</p>
                         <ul class="social-list">
@@ -308,7 +281,7 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img src="./image/c.jpg" alt="Микола Тарасов" width="270px">
+                        <img src="./image/c.jpg" alt="Микола Тарасов">
                         <h3 class="team-name">Микола Тарасов</h3>
                         <p class="team-about">Marketing</p>
                         <ul class="social-list">
@@ -344,7 +317,7 @@
                     </li>
 
                     <li class="team-item">
-                        <img src="./image/a.jpg" alt="Михайло Єрмаков" width="270px">
+                        <img src="./image/a.jpg" alt="Михайло Єрмаков">
                         <h3 class="team-name">Михайло Єрмаков</h3>
                         <p class="team-about">UI Designer</p>
                         <ul class="social-list">
@@ -380,7 +353,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
         <!-- clients -->
         <section class="section-clients">
             <div class="container">
@@ -400,7 +373,7 @@
                                 </use>
                             </svg></a>
                     </li>
-                    <li class="client-item">
+              <li class="client-item">
                         <a class="client-link"><svg width="44">
                                 <use href="./image/symbol-defss.svg#icon-logo-6">
 
@@ -431,11 +404,11 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
     </main>
 
     <!--footer-->
-    <footer>
+     <footer>
         <div class="container">
             <div >
                 <a href="/" class="footer-logo"><span class="logo-color">Web</span>Studio</a>
@@ -492,8 +465,55 @@
             </div>
         </div>
     </footer>
-    
+    <div class="backdrop is-hidden" data-mobile>
+        <div class="mobile-modal">
+            <button data-mobile-close>
+                    
+                <svg widht="40px">
+                    <use href="./image/sprite-mobile.svg#cross" >
+                        
+                    </use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
 
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+
+        function logBackdropClick() {
+            console.log("Це клік в бекдроп");
+        }
+    </script>
+    <script>
+        (() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-mobile-open]"),
+    closeModalBtn: document.querySelector("[data-mobile-close]"),
+    modal: document.querySelector("[data-mobile]"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle("modal-open");
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
+    </script>
 </body>
 
 </html>
