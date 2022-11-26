@@ -59,3 +59,18 @@ gap: 30px;
 background-image: url(../../image/astronaut.png);
 background-size: 70px;
 }
+.whywe-item:nth-child(2)::before{
+  
+  background-image: url(../../image/clock.png);
+  background-size: 70px;
+  }
+  .whywe-item:nth-child(3)::before{
+  
+    background-image: url(../../image/diagram.png);
+    background-size: 70px;
+    }
+    .whywe-item:nth-child(4)::before{
+  
+      background-image: url(../../image/Group.png);
+      background-size: 70px;
+      }
